@@ -1,0 +1,139 @@
+.results-area {
+	position: relative;
+	background: var(--c-lite-white);
+	cursor: default;
+}
+.results-list {
+	overflow-y: scroll;
+	margin: 0;
+	padding: 0;
+	height: var(--view-height);
+	list-style: none;
+	-webkit-user-select: none;
+	-webkit-app-region: no-drag;
+}
+.results-list .result {
+	cursor: pointer;
+	display: flex;
+	margin-right: 0.5625em;
+	height: var(--result-height);
+	border-radius: 0.25em;
+}
+
+/* column spacing */
+
+.results-list .result .col.left {
+	padding: 0.5625em;
+	width: var(--result-height);
+	height: 100%;
+}
+.results-list .result .col.right {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - var(--result-height));
+	justify-content: center;
+}
+
+/* result icon */
+
+.results-list .result .icon-area {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border-radius: 50%;
+	background: var(--c-lite-gray);
+	text-align: center;
+	justify-content: center;
+}
+.results-list .result .icon {
+	color: var(--c-dark-gray);
+	font-size: 1.125em;
+}
+
+/* result title, stub, tag */
+
+.results-list .result .title {
+	overflow: hidden;
+	padding-right: 0.5em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 1.125em;
+}
+.results-list .result .stub {
+	display: flex;
+	color: var(--c-dmed-gray);
+	font-weight: 300;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 0.0625em;
+}
+.results-list .result .stub .col.left {
+	overflow: hidden;
+	padding: 0;
+	padding-right: 0.5625em;
+	width: auto;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	flex: 1;
+}
+.results-list .result .stub .col.right {
+	flex-direction: row;
+	padding: 0;
+	width: auto;
+}
+
+.results-list .result .stub .tag {
+	margin-right: 0.25em;
+	padding: 0 0.25em;
+	border-radius: 0.125em;
+	background: var(--c-lite-gray);
+	color: var(--c-dmed-gray);
+	text-transform: uppercase;
+}
+
+.results-list .result .stub .tag:last-of-type {
+	margin-right: 0.5625em;
+}
+
+/* selected modifiers */
+
+.results-list .result.selected {
+	background: var(--c-lite-gray);
+}
+.results-list .result.selected .icon-area {
+	background: var(--c-lite-white);
+}
+.results-list .result.selected .stub .tag {
+	background: var(--c-lite-white);
+}
+
+/* tag variants, I suggest following https://material.google.com/style/color.html#color-color-palette */
+
+.results-list .result .stub .tag.red {
+	background: #d32f2f; /* red 700 */
+	color: var(--c-lite-white);
+}
+.results-list .result .stub .tag.green {
+	background: #388e3c; /* green 600 */
+	color: var(--c-lite-white);
+}
+.results-list .result .stub .tag.blue {
+	background: #1976d2; /* blue 700 */
+	color: var(--c-lite-white);
+}
+.results-list .result .stub .tag.gray,
+.results-list .result .stub .tag.grey {
+	background: #546e7a; /* blue grey 600 */
+	color: var(--c-lite-white);
+}
+
+/* results scrollbar */
+
+.results-list::-webkit-scrollbar {
+	width: 0.188em;
+	height: 0.188em;
+	border-radius: 0.188em;
+}
+.results-list::-webkit-scrollbar-thumb {
+	border-radius: 0.188em;
+	background: var(--c-lmed-gray);
+}

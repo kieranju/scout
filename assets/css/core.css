@@ -1,0 +1,50 @@
+*, *:before, *:after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+	overflow: hidden;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--c-dark-gray);
+}
+
+:root {
+	/* colours */
+	--c-lite-gray: #e0e0e0;
+	--c-lmed-gray: #c1c1c1;
+	--c-dmed-gray: #757575;
+	--c-dark-gray: #424242;
+	--c-base-white: #fff;
+	--c-lite-white: #fafafa;
+
+	/* results.css */
+	--result-height: 3.750em;
+	--view-results: 7;
+	--view-height: calc(var(--result-height) * var(--view-results));
+}
+
+::selection {
+	background-color: var(--c-dark-gray);
+	color: var(--c-base-white);
+}
+::-webkit-input-placeholder {
+	color: var(--c-lmed-gray);
+}
+
+.nosel {
+	user-select: none;
+	-webkit-user-select: none;
+}
+.sel {
+	user-select: text;
+	-webkit-user-select: text;
+}
+
+.view {
+	margin: 0.5625em;
+	padding: 0.5625em;
+	border-radius: 0.5625em;
+	background: var(--c-lite-white);
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2), 0 1px 3px rgba(0,0,0,0.07), inset 0 1px 0 #fff;
+	font-size: 100%; /* scale of application */
+	-webkit-app-region: drag;
+}

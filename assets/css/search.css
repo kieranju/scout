@@ -1,0 +1,17 @@
+.search-area {
+	position: relative;
+	margin: 0 0.5625em 0.5625em;
+	-webkit-user-select: none;
+}
+.search-input {
+	height: 100%;
+	width: 100%;
+	padding: 0.375em 0;
+	outline: 0;
+	border: 0;
+	background: transparent;
+	font-weight: 300;
+	font-size: 1.5em;
+	font-family: 'Roboto', sans-serif;
+	-webkit-app-region: no-drag;
+}
